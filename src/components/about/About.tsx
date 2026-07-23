@@ -1,12 +1,12 @@
 import React from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import { getIconUrl, getItemName } from "../../utils/getIconUrl";
-type SkillOrTagItem = string | { name: string; slug?: string };
 import "./About.css";
+import type { SkillOrTagItem } from "../../data/types";
 
 interface SkillCategory {
 	categoryName: string;
-	skills: SkillOrTagItem[];
+	skills: (string | SkillOrTagItem)[];
 }
 
 export const About: React.FC = () => {

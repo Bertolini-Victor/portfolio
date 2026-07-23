@@ -1,7 +1,4 @@
-export interface SkillOrTagItem {
-	name: string;
-	slug?: string;
-}
+import type { SkillOrTagItem } from "../data/types";
 
 const NO_ICON_TERMS = new Set([
 	"restful apis",
