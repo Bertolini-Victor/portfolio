@@ -75,7 +75,8 @@ export const en = {
 			messagePlaceholder: "Write your message here...",
 			send: "Send message",
 			sending: "Sending...",
-			success: "Message sent successfully! I will get back to you soon.",
+			success: "Message sent successfully! I'll get back to you soon.",
+			error: "Something went wrong sending the message. Please try again.",
 		},
 	},
 };

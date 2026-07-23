@@ -140,10 +140,9 @@ export const Contact: React.FC = () => {
 								color: "#d54c4c",
 							}}
 							role="alert">
-							Hubo un error al enviar el mensaje. Inténtalo nuevamente.
+							{t.contact.form.error}
 						</div>
 					)}
-
 					<div className="form-group">
 						<label htmlFor="name" className="form-label">
 							{t.contact.form.name} *

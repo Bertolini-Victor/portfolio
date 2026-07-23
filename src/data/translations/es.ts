@@ -78,6 +78,7 @@ export const es = {
 			send: "Enviar mensaje",
 			sending: "Enviando...",
 			success: "¡Mensaje enviado con éxito! Me pondré en contacto pronto.",
+			error: "Hubo un error al enviar el mensaje. Inténtalo nuevamente.",
 		},
 	},
 };
