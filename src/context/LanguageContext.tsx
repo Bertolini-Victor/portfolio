@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
-import { translations } from "../data/translations.ts";
-type Language = import("../data/translations.ts").Language;
+import { translations } from "../data/translations";
+import type { Language } from "../data/types";
 
 interface LanguageContextType {
 	language: Language;
