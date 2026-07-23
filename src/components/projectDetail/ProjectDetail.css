@@ -1,0 +1,179 @@
+.project-detail-page {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+.project-detail-hero {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.project-detail-title {
+	font-size: 2.4rem;
+	font-weight: 700;
+	color: var(--text);
+	letter-spacing: -0.5px;
+	line-height: 1.2;
+}
+
+.project-detail-banner {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	max-height: 420px;
+	border-radius: 12px;
+	overflow: hidden;
+	border: 1px solid var(--border);
+	background-color: var(--surface);
+}
+
+.project-detail-banner img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Grilla principal de historia */
+.project-detail-grid {
+	display: grid;
+	grid-template-columns: 1.8fr 1fr;
+	gap: 2.5rem;
+	align-items: start;
+}
+
+.project-detail-story {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.story-section h3 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--text);
+	margin-bottom: 0.75rem;
+}
+
+.story-text {
+	color: var(--text-muted);
+	font-size: 1rem;
+	line-height: 1.7;
+}
+
+.features-list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.feature-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+	color: var(--text);
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
+
+.feature-bullet {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--accent);
+	margin-top: 0.45rem;
+	flex-shrink: 0;
+}
+
+/* Columna lateral de metadatos */
+.project-detail-sidebar {
+	background-color: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.sidebar-block h4 {
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: var(--text);
+	margin-bottom: 0.75rem;
+}
+
+.sidebar-actions {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.sidebar-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6rem;
+	padding: 0.7rem 1rem;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.sidebar-btn.primary {
+	background-color: var(--accent);
+	color: #ffffff;
+}
+
+.sidebar-btn.primary:hover {
+	background-color: var(--accent-hover);
+}
+
+.sidebar-btn.secondary {
+	background-color: transparent;
+	border: 1px solid var(--border);
+	color: var(--text);
+}
+
+.sidebar-btn.secondary:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+}
+
+/* Galería de imágenes */
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1rem;
+	margin-top: 0.5rem;
+}
+
+.gallery-image-wrapper {
+	aspect-ratio: 16 / 9;
+	border-radius: 8px;
+	overflow: hidden;
+	border: 1px solid var(--border);
+	background-color: var(--surface);
+}
+
+.gallery-image-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.gallery-image-wrapper:hover img {
+	transform: scale(1.03);
+}
+
+@media (max-width: 850px) {
+	.project-detail-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+}
