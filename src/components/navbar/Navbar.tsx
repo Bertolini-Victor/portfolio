@@ -137,7 +137,6 @@ export const Navbar: React.FC<NavbarProps> = ({
 			</ul>
 
 			<div className="navbar-controls">
-				{/* Botón de CV integrado en la zona inferior de controles */}
 				<a
 					href={cvPath}
 					target="_blank"

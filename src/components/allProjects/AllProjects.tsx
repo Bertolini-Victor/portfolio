@@ -18,7 +18,6 @@ export const AllProjects: React.FC<AllProjectsProps> = ({
 
 	const allProjects = t.projects.items;
 
-	// Filtrado dinámico por título o tags
 	const filteredProjects = allProjects.filter((project) => {
 		const query = searchQuery.toLowerCase().trim();
 		if (!query) return true;
@@ -48,7 +47,6 @@ export const AllProjects: React.FC<AllProjectsProps> = ({
 				<h1>{t.allProjectsPage.title}</h1>
 				<p className="section-subtitle">{t.allProjectsPage.subtitle}</p>
 
-				{/* Buscador */}
 				<div className="projects-filter-bar">
 					<div className="search-input-wrapper">
 						<svg className="search-icon" viewBox="0 0 24 24">
@@ -66,7 +64,6 @@ export const AllProjects: React.FC<AllProjectsProps> = ({
 				</div>
 			</div>
 
-			{/* Grilla de Proyectos */}
 			{filteredProjects.length > 0 ? (
 				<div className="projects-grid">
 					{filteredProjects.map((project) => (

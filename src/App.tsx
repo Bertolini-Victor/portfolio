@@ -44,7 +44,6 @@ export const App: React.FC = () => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
 
-	// Navegar desde la Navbar si estamos en otra pantalla
 	const handleNavigateToSectionFromOtherView = (sectionId: string) => {
 		setCurrentView({ type: "home" });
 		setTimeout(() => {

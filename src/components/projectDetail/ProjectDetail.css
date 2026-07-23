@@ -35,7 +35,6 @@
 	object-fit: cover;
 }
 
-/* Grilla principal de historia */
 .project-detail-grid {
 	display: grid;
 	grid-template-columns: 1.8fr 1fr;
@@ -87,7 +86,6 @@
 	flex-shrink: 0;
 }
 
-/* Columna lateral de metadatos */
 .project-detail-sidebar {
 	background-color: var(--surface);
 	border: 1px solid var(--border);
@@ -144,7 +142,6 @@
 	color: var(--accent);
 }
 
-/* Galería de imágenes */
 .gallery-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

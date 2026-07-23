@@ -32,7 +32,6 @@ export const Contact: React.FC = () => {
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 
-		// Validar campos requeridos antes de enviar
 		if (
 			!formData.name.trim() ||
 			!formData.email.trim() ||
@@ -43,7 +42,6 @@ export const Contact: React.FC = () => {
 
 		setStatus("sending");
 
-		// Mapeo de parámetros hacia la plantilla de EmailJS
 		const templateParams = {
 			from_name: formData.name,
 			from_email: formData.email,

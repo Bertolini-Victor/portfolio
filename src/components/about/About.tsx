@@ -12,7 +12,6 @@ interface SkillCategory {
 export const About: React.FC = () => {
 	const { language, t } = useLanguage();
 
-	// Ruta dinámica que respeta el idioma activo y la base de GitHub Pages
 	const cvPath = `${import.meta.env.BASE_URL}cv-${language}.pdf`;
 
 	const skillCategories: SkillCategory[] = [

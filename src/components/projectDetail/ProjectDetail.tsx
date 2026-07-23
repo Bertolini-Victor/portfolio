@@ -51,7 +51,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
 			</div>
 
 			<div className="project-detail-grid">
-				{/* Historia y Características */}
 				<div className="project-detail-story">
 					{project.fullStory && (
 						<div className="story-section">
@@ -90,8 +89,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
 						</div>
 					)}
 				</div>
-
-				{/* Barra Lateral (Tecnologías + Acciones) */}
 				<aside className="project-detail-sidebar">
 					<div className="sidebar-block">
 						<h4>{t.projectDetail.technologiesTitle}</h4>
@@ -117,7 +114,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
 							})}
 						</div>
 					</div>
-
 					<div className="sidebar-actions">
 						{project.demoUrl && (
 							<a
@@ -133,7 +129,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
 								<span>{t.projects.liveDemo}</span>
 							</a>
 						)}
-
 						{project.githubUrl && (
 							<a
 								href={project.githubUrl}

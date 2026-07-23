@@ -18,7 +18,6 @@
 	line-height: 1.6;
 }
 
-/* Grilla de proyectos compacta (3 columnas en pantallas medianas/grandes) */
 .projects-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -45,7 +44,6 @@
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Imagen de preview con altura proporcional reducida */
 .project-image-wrapper {
 	width: 100%;
 	aspect-ratio: 16 / 8;
@@ -65,7 +63,6 @@
 	transform: scale(1.05);
 }
 
-/* Contenido interno compacto */
 .project-content {
 	padding: 1.1rem;
 	display: flex;
@@ -168,7 +165,6 @@
 	stroke-linejoin: round;
 }
 
-/* Botón 'Ver todos los proyectos' */
 .projects-footer {
 	display: flex;
 	justify-content: center;
