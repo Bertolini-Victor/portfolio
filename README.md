@@ -1,54 +1,61 @@
 # Victor Bertolini Agaras — Portfolio
 
-Portfolio personal, desarrollado desde cero con React y TypeScript. Bilingüe, con modo claro/oscuro, navegación lateral responsiva y páginas de detalle por proyecto.
+🇺🇸 English | [🇦🇷 Español](README.es.md)
 
-**Sitio en vivo:** [victorbertolini.com.ar](https://victorbertolini.com.ar)
+[![Live site](https://img.shields.io/badge/site-victorbertolini.com.ar-4C5FD5?style=flat-square)](https://victorbertolini.com.ar)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 
-<!-- Sugerencia: sumar acá una captura del sitio (home en modo claro y oscuro, por ejemplo) -->
+Personal portfolio, built from scratch with React and TypeScript. Bilingual, with light/dark mode, a responsive sidebar navigation, and per-project detail pages.
 
-## Características
+**Live site:** [victorbertolini.com.ar](https://victorbertolini.com.ar)
 
-- **Bilingüe (ES/EN):** detecta el idioma del navegador al cargar, con toggle manual para cambiarlo en cualquier momento.
-- **Modo claro / oscuro:** respeta la preferencia del sistema operativo por defecto, escucha cambios en vivo si el usuario cambia el tema del SO mientras navega, y permite forzar el modo manualmente.
-- **Navegación lateral responsiva:** sidebar fija en desktop, colapsa a barra inferior en mobile. Resalta la sección activa automáticamente mientras se scrollea.
-- **Detalle de proyecto:** cada proyecto tiene su propia vista con historia, características, galería de capturas y tecnologías usadas.
-- **Catálogo completo con búsqueda:** vista de "todos los proyectos" con filtro por texto/tecnología.
-- **Formulario de contacto funcional:** envío de mensajes vía EmailJS, sin necesidad de backend propio.
-- **CV descargable**, en español e inglés según el idioma activo.
+<!-- Suggestion: add a screenshot here (home in light and dark mode, for example) -->
 
-## Stack técnico
+## Features
 
-| Categoría | Tecnología |
-|---|---|
+- **Bilingual (ES/EN):** detects the browser's language on load, with a manual toggle to switch anytime.
+- **Light / dark mode:** follows the OS preference by default, updates live if the user changes their system theme mid-session, and can be overridden manually.
+- **Responsive sidebar navigation:** fixed sidebar on desktop, collapses to a bottom bar on mobile. Highlights the active section automatically while scrolling.
+- **Project detail pages:** each project has its own view with a full story, feature list, screenshot gallery, and tech stack.
+- **Searchable project catalog:** an "all projects" view with text/technology filtering.
+- **Working contact form:** sends messages via EmailJS, no backend required.
+- **Downloadable CV**, in Spanish or English depending on the active language.
+
+## Tech stack
+
+| Category | Technology |
+| --- | --- |
 | Framework | React 19 + TypeScript |
 | Build tool | Vite |
-| Estilos | CSS puro, con custom properties para theming (sin frameworks de CSS) |
-| Contacto | EmailJS |
+| Styling | Plain CSS, with custom properties for theming (no CSS framework) |
+| Contact form | EmailJS |
 | Linting | oxlint |
-| Deploy | gh-pages, dominio propio vía NIC.ar |
+| Deploy | gh-pages, custom domain via NIC.ar |
 
-## Estructura del proyecto
+## Project structure
 
-```
+```text
 src/
 ├── components/
-│   ├── about/          # Sección "Sobre mí" + skills
-│   ├── allProjects/     # Catálogo completo con búsqueda
-│   ├── contact/         # Formulario de contacto
-│   ├── navbar/           # Navegación lateral / inferior
-│   ├── projectDetail/   # Vista de detalle por proyecto
-│   └── projects/         # Proyectos destacados (home)
+│   ├── about/          # "About me" section + skills
+│   ├── allProjects/     # Full catalog with search
+│   ├── contact/         # Contact form
+│   ├── navbar/           # Sidebar / bottom navigation
+│   ├── projectDetail/   # Per-project detail view
+│   └── projects/         # Featured projects (home)
 ├── context/
-│   └── LanguageContext.tsx   # Estado global de idioma
+│   └── LanguageContext.tsx   # Global language state
 ├── data/
-│   ├── projects/         # Datos de proyectos (es / en)
-│   ├── translations/     # Textos de la interfaz (es / en)
-│   └── types.ts           # Tipos compartidos
+│   ├── projects/         # Project data (es / en)
+│   ├── translations/     # UI copy (es / en)
+│   └── types.ts           # Shared types
 └── utils/
-    └── getIconUrl.ts      # Resolución de íconos de tecnologías (Simple Icons)
+    └── getIconUrl.ts      # Technology icon resolution (Simple Icons)
 ```
 
-## Cómo correrlo localmente
+## Running it locally
 
 ```bash
 git clone https://github.com/Bertolini-Victor/portfolio.git
@@ -56,31 +63,31 @@ cd portfolio
 npm install
 ```
 
-El formulario de contacto necesita credenciales de [EmailJS](https://www.emailjs.com/). Copiá `.env.example` a `.env` y completá tus propios valores:
+The contact form needs [EmailJS](https://www.emailjs.com/) credentials. Copy `.env.example` to `.env` and fill in your own values:
 
 ```bash
 cp .env.example .env
 ```
 
-```
-VITE_EMAILJS_SERVICE_ID=tu_service_id
-VITE_EMAILJS_TEMPLATE_ID=tu_template_id
-VITE_EMAILJS_PUBLIC_KEY=tu_public_key
+```bash
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-Levantar el servidor de desarrollo:
+Start the dev server:
 
 ```bash
 npm run dev
 ```
 
-## Build y deploy
+## Build and deploy
 
 ```bash
-npm run build     # genera dist/
-npm run deploy    # build + publica a gh-pages
+npm run build     # generates dist/
+npm run deploy    # build + publish to gh-pages
 ```
 
-## Licencia
+## License
 
-Sin definir todavía — considerá agregar una [licencia MIT](https://choosealicense.com/licenses/mit/) si querés que el código sea reutilizable por otros.
+Not defined yet — consider adding an [MIT license](https://choosealicense.com/licenses/mit/) if you'd like the code to be reusable by others.
