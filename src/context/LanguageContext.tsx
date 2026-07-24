@@ -26,6 +26,10 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
 
 	useEffect(() => {
 		document.documentElement.lang = language;
+		document.title =
+			language === "es"
+				? "Victor Bertolini Agaras | Desarrollador Fullstack"
+				: "Victor Bertolini Agaras | Fullstack Developer";
 	}, [language]);
 
 	const toggleLanguage = () => {
