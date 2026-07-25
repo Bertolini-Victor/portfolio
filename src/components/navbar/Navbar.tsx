@@ -122,7 +122,7 @@ export const Navbar: React.FC = ({}) => {
 				{navItems.map((item) => (
 					<li key={item.id}>
 						<a
-							href={`#${item.id}`}
+							href={`#`}
 							className={`nav-item ${
 								activeSection === item.id && isHome
 									? "active"
