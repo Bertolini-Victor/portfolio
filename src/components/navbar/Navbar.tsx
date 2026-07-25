@@ -1,20 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "../../context/LanguageContext";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 type Theme = "light" | "dark";
 
-interface NavbarProps {
-	onNavigateToSection?: (sectionId: string) => void;
-	currentViewType?: "home" | "all-projects" | "detail";
-}
-
-export const Navbar: React.FC<NavbarProps> = ({
-	onNavigateToSection,
-	currentViewType = "home",
-}) => {
+export const Navbar: React.FC = ({}) => {
 	const { language, toggleLanguage, t } = useLanguage();
-
+	const location = useLocation();
+	const navigate = useNavigate();
+	const isHome = location.pathname === "/";
 	const cvPath = `${import.meta.env.BASE_URL}cv-${language}.pdf`;
 
 	const getSystemTheme = (): Theme => {
@@ -46,7 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 	}, []);
 
 	useEffect(() => {
-		if (currentViewType !== "home") return;
+		if (!isHome) return;
 
 		const handleScroll = () => {
 			if (window.scrollY < 100) {
@@ -78,7 +73,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 			window.removeEventListener("scroll", handleScroll);
 			sections.forEach((section) => observer.unobserve(section));
 		};
-	}, [currentViewType]);
+	}, [isHome]);
 
 	const toggleTheme = (): void => {
 		setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
@@ -89,10 +84,14 @@ export const Navbar: React.FC<NavbarProps> = ({
 		id: string,
 	) => {
 		e.preventDefault();
-		window.history.replaceState(null, "", window.location.pathname);
-
-		if (currentViewType !== "home" && onNavigateToSection) {
-			onNavigateToSection(id);
+		if (!isHome) {
+			navigate("/");
+			setTimeout(() => {
+				const element = document.getElementById(id);
+				if (element) {
+					element.scrollIntoView({ behavior: "smooth" });
+				}
+			}, 50);
 		} else {
 			const element = document.getElementById(id);
 			if (element) {
@@ -125,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 						<a
 							href={`#${item.id}`}
 							className={`nav-item ${
-								activeSection === item.id && currentViewType === "home"
+								activeSection === item.id && isHome
 									? "active"
 									: ""
 							}`}

@@ -1,19 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
 import { getIconUrl, getItemName } from "../../utils/getIconUrl";
 import "./Projects.css";
 
-interface ProjectsProps {
-	onViewAllProjects?: () => void;
-	onSelectProject?: (id: string) => void;
-}
-
-export const Projects: React.FC<ProjectsProps> = ({
-	onViewAllProjects,
-	onSelectProject,
-}) => {
+export const Projects: React.FC = () => {
 	const { t } = useLanguage();
-
+	const navigate = useNavigate();
 	const featuredProjects = t.projects.items.filter((item) => item.featured);
 
 	return (
@@ -28,7 +21,7 @@ export const Projects: React.FC<ProjectsProps> = ({
 					<article
 						key={project.id}
 						className="project-card"
-						onClick={() => onSelectProject && onSelectProject(project.id)}>
+						onClick={() => navigate(`/proyectos/${project.id}`)}>
 						<div className="project-image-wrapper">
 							<img
 								src={project.image}
@@ -105,7 +98,7 @@ export const Projects: React.FC<ProjectsProps> = ({
 			</div>
 
 			<div className="projects-footer">
-				<button onClick={onViewAllProjects} className="view-all-btn">
+				<button onClick={() => navigate("/proyectos")} className="view-all-btn">
 					<span>{t.projects.viewAll}</span>
 					<svg className="project-btn-icon" viewBox="0 0 24 24">
 						<line x1="5" y1="12" x2="19" y2="12" />

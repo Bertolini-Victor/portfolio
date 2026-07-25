@@ -1,25 +1,20 @@
 import React from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
 import { getIconUrl, getItemName } from "../../utils/getIconUrl";
 import "./ProjectDetail.css";
 
-interface ProjectDetailProps {
-	projectId: string;
-	onBack: () => void;
-}
-
-export const ProjectDetail: React.FC<ProjectDetailProps> = ({
-	projectId,
-	onBack,
-}) => {
+export const ProjectDetail: React.FC = () => {
 	const { t } = useLanguage();
+	const { id } = useParams<{ id: string }>();
+	const navigate = useNavigate();
 
-	const project = t.projects.items.find((p) => p.id === projectId);
+	const project = t.projects.items.find((p) => p.id === id);
 
 	if (!project) {
 		return (
 			<div className="project-detail-page">
-				<button onClick={onBack} className="back-home-btn">
+				<button onClick={() => navigate(-1)} className="back-home-btn">
 					<svg className="project-btn-icon" viewBox="0 0 24 24">
 						<line x1="19" y1="12" x2="5" y2="12" />
 						<polyline points="12 19 5 12 12 5" />
@@ -34,7 +29,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
 	return (
 		<article className="project-detail-page">
 			<div className="project-detail-hero">
-				<button onClick={onBack} className="back-home-btn">
+				<button onClick={() => navigate(-1)} className="back-home-btn">
 					<svg className="project-btn-icon" viewBox="0 0 24 24">
 						<line x1="19" y1="12" x2="5" y2="12" />
 						<polyline points="12 19 5 12 12 5" />

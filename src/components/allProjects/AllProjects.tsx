@@ -1,19 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
 import { getIconUrl, getItemName } from "../../utils/getIconUrl";
 import "../projects/Projects.css";
 import "./AllProjects.css";
 
-interface AllProjectsProps {
-	onBackToHome: () => void;
-	onSelectProject: (id: string) => void;
-}
-
-export const AllProjects: React.FC<AllProjectsProps> = ({
-	onBackToHome,
-	onSelectProject,
-}) => {
+export const AllProjects: React.FC = () => {
 	const { t } = useLanguage();
+	const navigate = useNavigate();
 	const [searchQuery, setSearchQuery] = useState("");
 
 	const allProjects = t.projects.items;
@@ -36,7 +30,7 @@ export const AllProjects: React.FC<AllProjectsProps> = ({
 	return (
 		<div className="all-projects-page">
 			<div className="all-projects-header">
-				<button onClick={onBackToHome} className="back-home-btn">
+				<button onClick={() => navigate("/")} className="back-home-btn">
 					<svg className="project-btn-icon" viewBox="0 0 24 24">
 						<line x1="19" y1="12" x2="5" y2="12" />
 						<polyline points="12 19 5 12 12 5" />
@@ -70,7 +64,7 @@ export const AllProjects: React.FC<AllProjectsProps> = ({
 						<article
 							key={project.id}
 							className="project-card"
-							onClick={() => onSelectProject(project.id)}>
+							onClick={() => navigate(`/proyectos/${project.id}`)}>
 							<div className="project-image-wrapper">
 								<img
 									src={project.image}
