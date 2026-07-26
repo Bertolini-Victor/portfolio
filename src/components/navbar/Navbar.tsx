@@ -15,11 +15,11 @@ export const Navbar: React.FC = ({}) => {
 	const getSystemTheme = (): Theme => {
 		if (
 			typeof window !== "undefined" &&
-			window.matchMedia("(prefers-color-scheme: dark)").matches
+			window.matchMedia("(prefers-color-scheme: light)").matches
 		) {
-			return "dark";
+			return "light";
 		}
-		return "light";
+		return "dark";
 	};
 
 	const [theme, setTheme] = useState<Theme>(getSystemTheme);
@@ -124,9 +124,7 @@ export const Navbar: React.FC = ({}) => {
 						<a
 							href={`#`}
 							className={`nav-item ${
-								activeSection === item.id && isHome
-									? "active"
-									: ""
+								activeSection === item.id && isHome ? "active" : ""
 							}`}
 							onClick={(e) => handleNavClick(e, item.id)}>
 							{item.label}
