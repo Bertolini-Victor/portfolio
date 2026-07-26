@@ -5,6 +5,7 @@
 	--text-muted: #5c6178;
 	--border: #e4e5f0;
 	--accent: #4c5fd5;
+	--accent-text: var(--accent);
 	--accent-hover: #3b4bc0;
 	--nav-width: 220px;
 	--scrollbar-thumb: #c2c5d6;
@@ -17,7 +18,8 @@
 	--text: #ededf5;
 	--text-muted: #9a9db3;
 	--border: #2a2c3b;
-	--accent: #a48cf0;
+	--accent: #5b3ecd;;
+	--accent-text: #b794f4;
 	--accent-hover: #b7a3f5;
 	--scrollbar-thumb: #2a2c3b;
 	--scrollbar-thumb-hover: #3e4156;

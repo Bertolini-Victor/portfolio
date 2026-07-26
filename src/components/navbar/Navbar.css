@@ -70,7 +70,7 @@
 
 .nav-item:hover,
 .nav-item.active {
-	color: var(--accent);
+	color: var(--accent-text);
 }
 
 .nav-item.active {
