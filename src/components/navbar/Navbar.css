@@ -118,7 +118,7 @@
 .lang-btn:hover,
 .theme-btn:hover {
 	border-color: var(--accent);
-	color: var(--accent);
+	color: var(--accent-text);
 }
 
 .theme-icon {
@@ -150,7 +150,7 @@
 
 .navbar-cv-btn:hover {
 	border-color: var(--accent);
-	color: var(--accent);
+	color: var(--accent-text);
 	transform: translateY(-1px);
 }
 
@@ -239,7 +239,7 @@
 
 	.cv-btn-mobile:hover {
 		border-color: var(--accent);
-		color: var(--accent);
+		color: var(--accent-text);
 	}
 
 	.navbar-cv-btn {

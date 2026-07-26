@@ -76,7 +76,7 @@
 
 .social-link-item:hover {
 	border-color: var(--accent);
-	color: var(--accent);
+	color: var(--accent-text);
 	transform: translateX(4px);
 }
 
@@ -158,7 +158,7 @@
 .form-success-msg {
 	background-color: rgba(76, 95, 213, 0.1);
 	border: 1px solid var(--accent);
-	color: var(--accent);
+	color: var(--accent-text);
 	padding: 0.8rem 1rem;
 	border-radius: 8px;
 	font-size: 0.9rem;

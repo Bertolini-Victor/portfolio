@@ -160,7 +160,7 @@
 
 .skill-badge:hover {
 	border-color: var(--accent);
-	color: var(--accent);
+	color: var(--accent-text);
 	background-color: var(--bg);
 }
 
