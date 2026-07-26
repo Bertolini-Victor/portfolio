@@ -111,7 +111,7 @@ export const Navbar: React.FC = ({}) => {
 		<nav className="navbar">
 			<div className="navbar-profile">
 				<img
-					src="https://via.placeholder.com/150"
+					src="./public/foto_perfil.jpeg"
 					alt="Victor Bertolini Agaras"
 					className="navbar-avatar"
 				/>
