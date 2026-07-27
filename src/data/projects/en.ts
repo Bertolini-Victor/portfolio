@@ -68,38 +68,4 @@ export const projectsEn: ProjectItem[] = [
 		githubUrl: "https://github.com/Bertolini-Victor",
 		demoUrl: "https://demo.com",
 	},
-	{
-		id: "4",
-		title: "Metrics Control Dashboard",
-		description:
-			"Interactive dashboard for real-time monitoring of traffic, sales, and key performance metrics.",
-		fullStory:
-			"Analytical dashboard built to process large volumes of operational metrics. Allows filtering by time ranges and viewing executive summaries.",
-		features: [
-			"Dynamic visualizations and interactive charts.",
-			"Date filters and data export.",
-		],
-		image:
-			"https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
-		tags: ["React", "TypeScript", "CSS3", "JSON"],
-		featured: false,
-		githubUrl: "https://github.com/Bertolini-Victor",
-	},
-	{
-		id: "5",
-		title: "CLI Automation Tool",
-		description:
-			"Node.js module for processing data files and performing fast structured conversions.",
-		fullStory:
-			"Command line tool to automate the transformation of JSON and CSV files into structured formats ready for backend API consumption.",
-		features: [
-			"Ultra-fast execution in Node.js environment.",
-			"Automatic data schema validation.",
-		],
-		image:
-			"https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-		tags: ["Node.js", "JavaScript", "Git"],
-		featured: false,
-		githubUrl: "https://github.com/Bertolini-Victor",
-	},
 ];

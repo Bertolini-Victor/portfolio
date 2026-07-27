@@ -3,103 +3,79 @@ import type { ProjectItem } from "../types";
 export const projectsEs: ProjectItem[] = [
 	{
 		id: "1",
-		title: "Sistema de Gestión y Facturación",
+		title: "TechStore — E-commerce con panel de administración",
 		description:
-			"Aplicación web para administración de estados de pedidos e integración con servicios web para generación de facturas electrónicas.",
+			"E-commerce de hardware premium con autenticación, CRUD de productos en tiempo real contra Firestore y panel de administración protegido.",
 		fullStory:
-			"Este proyecto nació de la necesidad de automatizar la gestión de pedidos e integración directa con servicios web de facturación electrónica. Desarrollé una interfaz dinámica en React que permite gestionar los estados de cada orden en tiempo real, generar comprobantes virtuales y descargar reportes estructurados.",
+			"Proyecto final del curso de React de TalentoTech. Arrancó como un catálogo estático en JSON y escaló a una arquitectura 100% cloud: el catálogo migró a Firestore, se sumó autenticación con Firebase Auth, y las rutas de administración quedaron protegidas por un componente guardián que expulsa a cualquiera que no esté logueado. El panel de admin permite crear, editar y eliminar productos en tiempo real, con carga de imágenes vía la API de Imgbb.",
 		features: [
-			"Integración con Web Services de facturación legal (ARCA/AFIP).",
-			"Gestión dinámica de estados de pedido con actualización instantánea.",
-			"Exportación de facturas y reportes en formato JSON y PDF.",
-			"Diseño responsivo optimizado para uso en escritorio y tabletas.",
+			"Carrito con contexto global (Context API) y cálculo de totales en tiempo real",
+			"Autenticación con Firebase Auth y rutas protegidas para el panel de administración",
+			"CRUD completo de productos contra Firestore, con carga de imágenes vía Imgbb",
+			"Búsqueda en tiempo real y paginación matemática del catálogo",
+			"Sistema de cupones de descuento en el checkout",
+			"SEO dinámico por página con React Helmet",
 		],
 		gallery: [
-			"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-			"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+			"public/screenshots/techstore/techstore-1.png",
+			"public/screenshots/techstore/techstore-2.png",
 		],
-		image:
-			"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-		tags: ["React", "TypeScript", "Bootstrap", "Node.js", "JSON"],
+		image: "/screenshots/techstore.png",
+		tags: [
+			"React",
+			"Firebase",
+			"React Router",
+			"Styled Components",
+			"React Bootstrap",
+		],
 		featured: true,
-		githubUrl: "https://github.com/Bertolini-Victor",
+		githubUrl:
+			"https://github.com/Bertolini-Victor/ProyectoFinal-Curso-ReactJs-TalentoTechr",
 		demoUrl: "https://demo.com",
 	},
 	{
 		id: "2",
-		title: "Feed Personalizado & Integración API",
+		title: "Generador de Presupuestos",
 		description:
-			"Módulo web dinámico consumiendo API REST para renderizado de publicaciones y optimización de componentes visuales.",
+			"Cotizador de servicios web bilingüe y multi-moneda, con catálogo editable y exportación a PDF sin depender de ningún backend.",
 		fullStory:
-			"Diseño e implementación de un feed interactivo integrado mediante API REST directa para consumir y formatear publicaciones de redes sociales en tiempo real. Se optimizó el ciclo de vida de los componentes para lograr tiempos de carga imperceptibles y un renderizado impecable.",
+			"Una SPA pensada para armar presupuestos de servicios web rápido: catálogo de 55 servicios organizados en 11 categorías, completamente editable desde la interfaz. Cada servicio tiene su propia descripción y precio en español e inglés, y en pesos y dólares — el cambio de idioma o moneda es instantáneo. El presupuesto final se exporta a PDF usando la función nativa de impresión del navegador, evitando sumar una librería pesada solo para eso.",
 		features: [
-			"Consumo de API REST con manejo de errores y estados de carga.",
-			"Carga diferida (lazy loading) para imágenes y assets visuales.",
-			"Soporte completo para temas claro y oscuro.",
+			"Catálogo de 55 servicios en 11 categorías, editable en vivo desde un modal de gestión",
+			"Persistencia automática en localStorage — nada se pierde al recargar",
+			"Bilingüe (ES/EN) y multi-moneda (ARS/USD) por cada servicio individual",
+			"Exportación a PDF nativa vía window.print(), sin librerías externas",
+			"Modo claro/oscuro según la preferencia del sistema operativo",
 		],
 		gallery: [
-			"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+			"public/screenshots/generador_presupuestos/image2.png",
+			"public/screenshots/generador_presupuestos/image3.png",
+			"public/screenshots/generador_presupuestos/image4.png",
 		],
-		image:
-			"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
-		tags: ["React", "JavaScript", "CSS3", "RESTful APIs"],
+		image: "public/screenshots/generador_presupuestos/image.png",
+		tags: ["React", "Vite", "CSS3"],
 		featured: true,
-		githubUrl: "https://github.com/Bertolini-Victor",
+		githubUrl: "https://github.com/Bertolini-Victor/generador-presupuestos",
 	},
 	{
 		id: "3",
-		title: "Sitio Web Multilingüe & Analytics",
+		title: "Trivia — Trabajo final de UI (UNQ)",
 		description:
-			"Plataforma web con internacionalización, optimización SEO mediante sitemap/robots.txt e integración con Google Analytics.",
+			"Juego de trivia con 4 niveles de dificultad, preguntas en tiempo real vía API y diseño mobile-first.",
 		fullStory:
-			"Desarrollo integral de un sitio web corporativo con soporte multilenguaje (ES/EN) dinámico, preparado para SEO de alto rendimiento con mapa de sitio (sitemap.xml), directivas robots.txt y telemetría avanzada vía Google Analytics.",
+			"Trabajo final integrador para Construcción de Interfaces de Usuario en la UNQ. El objetivo era una experiencia fluida y responsive consumiendo una API externa en tiempo real, con estados de juego relativamente complejos: 4 niveles de dificultad, un desafío contra el tiempo con barra de progreso visual, y guardado de mejores puntajes en el navegador.",
 		features: [
-			"Internacionalización (i18n) sin parpadeo de interfaz.",
-			"Configuración SEO avanzada y métricas integradas con Google Analytics.",
-			"Despliegue automatizado mediante GitHub Pages.",
+			"4 niveles de dificultad (Easy, Normal, Hard, Extreme)",
+			"Desafío contra el tiempo, 10 segundos por pregunta con barra de progreso",
+			"Consumo de preguntas en tiempo real vía Axios",
+			"High scores persistidos en localStorage",
+			"Diseño mobile-first con menú hamburguesa",
 		],
-		gallery: [
-			"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-		],
-		image:
-			"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-		tags: ["React", "Vite", "Git", "GitHub"],
+		image: "/public/screenshots/trivia_game/home_desktop.png",
+		tags: ["React", "Vite", "React Router", "Axios"],
 		featured: true,
-		githubUrl: "https://github.com/Bertolini-Victor",
-		demoUrl: "https://demo.com",
-	},
-	{
-		id: "4",
-		title: "Panel de Control de Métricas",
-		description:
-			"Dashboard interactivo para monitoreo en tiempo real de tráfico, ventas y métricas clave de rendimiento.",
-		fullStory:
-			"Panel de control analítico construido para procesar grandes volúmenes de métricas operativas. Permite filtrar datos por rangos de tiempo y visualizar resúmenes ejecutivos.",
-		features: [
-			"Visualizaciones dinámicas y gráficos interactivos.",
-			"Filtros por fecha y exportación de datos.",
-		],
-		image:
-			"https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
-		tags: ["React", "TypeScript", "CSS3", "JSON"],
-		featured: false,
-		githubUrl: "https://github.com/Bertolini-Victor",
-	},
-	{
-		id: "5",
-		title: "Herramienta de Automatización CLI",
-		description:
-			"Módulo en Node.js para procesamiento de archivos de datos y conversión estructurada rápida.",
-		fullStory:
-			"Herramienta en línea de comandos para automatizar la transformación de archivos JSON y CSV a formatos estructurados listos para ser consumidos por APIs backend.",
-		features: [
-			"Ejecución ultra rápida en entorno Node.js.",
-			"Validación automática de esquemas de datos.",
-		],
-		image:
-			"https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-		tags: ["Node.js", "JavaScript", "Git"],
-		featured: false,
-		githubUrl: "https://github.com/Bertolini-Victor",
+		githubUrl:
+			"https://github.com/Bertolini-Victor/unq-ui-victor-hugo-bertolini-agaras-trabajo-final",
+		demoUrl: "https://unq-ui-victor-hugo-bertolini-agaras.vercel.app/",
 	},
 ];
