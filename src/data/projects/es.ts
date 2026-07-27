@@ -36,10 +36,6 @@ export const projectsEs: ProjectItem[] = [
 			"Sistema de cupones de descuento en el checkout",
 			"SEO dinámico por página con React Helmet",
 		],
-		gallery: [
-			"screenshots/techstore/techstore-1.png",
-			"screenshots/techstore/techstore-2.png",
-		],
 		image: "/screenshots/techstore.png",
 		tags: [
 			"React",
@@ -50,8 +46,7 @@ export const projectsEs: ProjectItem[] = [
 		],
 		featured: true,
 		githubUrl:
-			"https://github.com/Bertolini-Victor/ProyectoFinal-Curso-ReactJs-TalentoTechr",
-		demoUrl: "https://demo.com",
+			"https://github.com/Bertolini-Victor/ProyectoFinal-Curso-ReactJs-TalentoTech",
 	},
 	{
 		id: "3",
@@ -68,11 +63,11 @@ export const projectsEs: ProjectItem[] = [
 			"Modo claro/oscuro según la preferencia del sistema operativo",
 		],
 		gallery: [
-			"screenshots/generador_presupuestos/image2.png",
-			"screenshots/generador_presupuestos/image3.png",
-			"screenshots/generador_presupuestos/image4.png",
+			"/screenshots/generador_presupuestos/image2.png",
+			"/screenshots/generador_presupuestos/image3.png",
+			"/screenshots/generador_presupuestos/image4.png",
 		],
-		image: "screenshots/generador_presupuestos/image.png",
+		image: "/screenshots/generador_presupuestos/image.png",
 		tags: ["React", "Vite", "CSS3"],
 		featured: true,
 		githubUrl: "https://github.com/Bertolini-Victor/generador-presupuestos",
@@ -91,7 +86,7 @@ export const projectsEs: ProjectItem[] = [
 			"High scores persistidos en localStorage",
 			"Diseño mobile-first con menú hamburguesa",
 		],
-		image: "screenshots/trivia_game/home_desktop.png",
+		image: "/screenshots/trivia_game/home_desktop.png",
 		tags: ["React", "Vite", "React Router", "Axios"],
 		featured: true,
 		githubUrl:
@@ -113,7 +108,7 @@ export const projectsEs: ProjectItem[] = [
 			"Dashboard responsive en modo oscuro, para PC y mobile",
 		],
 		image: "/screenshots/radar/image.png",
-		gallery: ["screenshots/radar/image1.png", "screenshots/radar/image2.png"],
+		gallery: ["/screenshots/radar/image1.png", "/screenshots/radar/image2.png"],
 		tags: ["React", "Vite", "Arduino", "C++"],
 		featured: true,
 		githubUrl:

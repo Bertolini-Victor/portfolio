@@ -36,10 +36,6 @@ export const projectsEn: ProjectItem[] = [
 			"Discount coupon system at checkout",
 			"Dynamic per-page SEO with React Helmet",
 		],
-		gallery: [
-			"/screenshots/techstore/techstore-1.png",
-			"/screenshots/techstore/techstore-2.png",
-		],
 		image: "/screenshots/techstore.png",
 		tags: [
 			"React",
@@ -112,7 +108,7 @@ export const projectsEn: ProjectItem[] = [
 			"Responsive dark-mode dashboard, for desktop and mobile",
 		],
 		image: "/screenshots/radar/image.png",
-		gallery: ["screenshots/radar/image1.png", "screenshots/radar/image2.png"],
+		gallery: ["/screenshots/radar/image1.png", "/screenshots/radar/image2.png"],
 		tags: ["React", "Vite", "Arduino", "C++"],
 		featured: true,
 		githubUrl:
