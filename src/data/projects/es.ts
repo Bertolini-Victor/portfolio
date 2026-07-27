@@ -112,7 +112,8 @@ export const projectsEs: ProjectItem[] = [
 			"Detección de desconexión en tiempo real vía AbortController",
 			"Dashboard responsive en modo oscuro, para PC y mobile",
 		],
-		image: "/screenshots/radar-iot.png",
+		image: "/screenshots/radar/image.png",
+		gallery: ["screenshots/radar/image1.png", "screenshots/radar/image2.png"],
 		tags: ["React", "Vite", "Arduino", "C++"],
 		featured: true,
 		githubUrl:
