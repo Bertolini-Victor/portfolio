@@ -21,7 +21,6 @@
 
 .project-detail-banner {
 	width: 100%;
-	aspect-ratio: 16 / 9;
 	max-height: 420px;
 	border-radius: 12px;
 	overflow: hidden;
