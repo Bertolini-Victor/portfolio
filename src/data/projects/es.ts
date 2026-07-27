@@ -37,8 +37,8 @@ export const projectsEs: ProjectItem[] = [
 			"SEO dinámico por página con React Helmet",
 		],
 		gallery: [
-			"public/screenshots/techstore/techstore-1.png",
-			"public/screenshots/techstore/techstore-2.png",
+			"screenshots/techstore/techstore-1.png",
+			"screenshots/techstore/techstore-2.png",
 		],
 		image: "/screenshots/techstore.png",
 		tags: [
@@ -68,11 +68,11 @@ export const projectsEs: ProjectItem[] = [
 			"Modo claro/oscuro según la preferencia del sistema operativo",
 		],
 		gallery: [
-			"public/screenshots/generador_presupuestos/image2.png",
-			"public/screenshots/generador_presupuestos/image3.png",
-			"public/screenshots/generador_presupuestos/image4.png",
+			"screenshots/generador_presupuestos/image2.png",
+			"screenshots/generador_presupuestos/image3.png",
+			"screenshots/generador_presupuestos/image4.png",
 		],
-		image: "public/screenshots/generador_presupuestos/image.png",
+		image: "screenshots/generador_presupuestos/image.png",
 		tags: ["React", "Vite", "CSS3"],
 		featured: true,
 		githubUrl: "https://github.com/Bertolini-Victor/generador-presupuestos",
@@ -91,7 +91,7 @@ export const projectsEs: ProjectItem[] = [
 			"High scores persistidos en localStorage",
 			"Diseño mobile-first con menú hamburguesa",
 		],
-		image: "/public/screenshots/trivia_game/home_desktop.png",
+		image: "screenshots/trivia_game/home_desktop.png",
 		tags: ["React", "Vite", "React Router", "Axios"],
 		featured: true,
 		githubUrl:
