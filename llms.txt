@@ -1,0 +1,7 @@
+# Portfolio de Victor Bertolini Agaras
+
+Este es el portfolio profesional de Victor Bertolini Agaras, desarrollador de software enfocado en la creación de aplicaciones web modernas y escalables.
+
+## Enlaces útiles
+- [GitHub de Victor](https://github.com/Bertolini-Victor)
+- [LinkedIn de Victor](https://www.linkedin.com/in/victor-bertolini)
