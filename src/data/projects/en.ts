@@ -108,7 +108,13 @@ export const projectsEn: ProjectItem[] = [
 			"Responsive dark-mode dashboard, for desktop and mobile",
 		],
 		image: "/screenshots/radar/image.png",
-		gallery: ["/screenshots/radar/image1.png", "/screenshots/radar/image2.png"],
+		gallery: [
+			"/screenshots/radar/image1.png",
+			"/screenshots/radar/image2.png",
+			"/screenshots/radar/radar2.jpeg",
+			"/screenshots/radar/radar3.jpeg",
+			"/screenshots/radar/radar1.jpeg",
+		],
 		tags: ["React", "Vite", "Arduino", "C++"],
 		featured: true,
 		githubUrl:

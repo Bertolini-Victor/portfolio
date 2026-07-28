@@ -56,6 +56,7 @@ export const en = {
 		galleryTitle: "Screenshots Gallery",
 		technologiesTitle: "Technologies Used",
 		notFound: "Project not found.",
+		closeLightbox: "Close image"
 	},
 	contact: {
 		title: "Contact",

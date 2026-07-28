@@ -57,6 +57,7 @@ export const es = {
 		galleryTitle: "Galería de Capturas",
 		technologiesTitle: "Tecnologías Utilizadas",
 		notFound: "Proyecto no encontrado.",
+		closeLightbox: "Cerrar imagen",
 	},
 	contact: {
 		title: "Contacto",
