@@ -149,6 +149,7 @@
 }
 
 .gallery-image-wrapper {
+	cursor: pointer;
 	border-radius: 8px;
 	overflow: hidden;
 	border: 1px solid var(--border);
@@ -164,6 +165,52 @@
 
 .gallery-image-wrapper:hover img {
 	transform: scale(1.03);
+}
+
+.lightbox-overlay {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.85);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	padding: 2rem;
+}
+
+.lightbox-image {
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 8px;
+	cursor: default;
+}
+
+.lightbox-close {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: none;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.lightbox-close:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-close svg {
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
 }
 
 @media (max-width: 850px) {

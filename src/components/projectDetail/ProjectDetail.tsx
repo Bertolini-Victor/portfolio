@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
 import { getIconUrl, getItemName } from "../../utils/getIconUrl";
@@ -8,8 +8,21 @@ export const ProjectDetail: React.FC = () => {
 	const { t } = useLanguage();
 	const { id } = useParams<{ id: string }>();
 	const navigate = useNavigate();
-
+	const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 	const project = t.projects.items.find((p) => p.id === id);
+
+	useEffect(() => {
+		if (!lightboxImage) return;
+		const handleKeyDown = (e: KeyboardEvent) => {
+			if (e.key === "Escape") setLightboxImage(null);
+		};
+		document.addEventListener("keydown", handleKeyDown);
+		document.body.style.overflow = "hidden";
+		return () => {
+			document.removeEventListener("keydown", handleKeyDown);
+			document.body.style.overflow = "";
+		};
+	}, [lightboxImage]);
 
 	if (!project) {
 		return (
@@ -53,7 +66,6 @@ export const ProjectDetail: React.FC = () => {
 							<p className="story-text">{project.fullStory}</p>
 						</div>
 					)}
-
 					{project.features && project.features.length > 0 && (
 						<div className="story-section">
 							<h3>{t.projectDetail.featuresTitle}</h3>
@@ -67,13 +79,20 @@ export const ProjectDetail: React.FC = () => {
 							</ul>
 						</div>
 					)}
-
 					{project.gallery && project.gallery.length > 0 && (
 						<div className="story-section">
 							<h3>{t.projectDetail.galleryTitle}</h3>
 							<div className="gallery-grid">
 								{project.gallery.map((imgUrl, idx) => (
-									<div key={idx} className="gallery-image-wrapper">
+									<div
+										key={idx}
+										className="gallery-image-wrapper"
+										onClick={() => setLightboxImage(imgUrl)}
+										role="button"
+										tabIndex={0}
+										onKeyDown={(e) =>
+											e.key === "Enter" && setLightboxImage(imgUrl)
+										}>
 										<img
 											src={imgUrl}
 											alt={`${project.title} screenshot ${idx + 1}`}
@@ -141,6 +160,27 @@ export const ProjectDetail: React.FC = () => {
 					</div>
 				</aside>
 			</div>
+			{lightboxImage && (
+				<div
+					className="lightbox-overlay"
+					onClick={() => setLightboxImage(null)}>
+					<button
+						className="lightbox-close"
+						onClick={() => setLightboxImage(null)}
+						aria-label={t.projectDetail.closeLightbox}>
+						<svg viewBox="0 0 24 24" width="24" height="24">
+							<line x1="18" y1="6" x2="6" y2="18" />
+							<line x1="6" y1="6" x2="18" y2="18" />
+						</svg>
+					</button>
+					<img
+						src={lightboxImage}
+						alt=""
+						className="lightbox-image"
+						onClick={(e) => e.stopPropagation()}
+					/>
+				</div>
+			)}
 		</article>
 	);
 };
