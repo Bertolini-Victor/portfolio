@@ -87,7 +87,8 @@ body {
 }
 
 [data-theme="dark"] img[src*="github"],
-[data-theme="dark"] img[src*="json"] {
+[data-theme="dark"] img[src*="json"],
+[data-theme="dark"] img[src*="expo"] {
 	filter: invert(1);
 }
 
