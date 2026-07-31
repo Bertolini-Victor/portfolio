@@ -29,6 +29,7 @@ export const es = {
 		categories: {
 			frontend: "Frontend",
 			backend: "Backend & APIs",
+			databases: "Bases de Datos",
 			tools: "Herramientas & Flujo de trabajo",
 		},
 	},

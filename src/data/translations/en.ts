@@ -29,6 +29,7 @@ export const en = {
 		categories: {
 			frontend: "Frontend",
 			backend: "Backend & APIs",
+			databases: "Databases",
 			tools: "Tools & Workflow",
 		},
 	},
