@@ -32,6 +32,10 @@ export const getIconUrl = (item: string | SkillOrTagItem): string | null => {
 		nodejs: "nodedotjs",
 		js: "javascript",
 		ts: "typescript",
+		springboot: "Spring Boot",
+		expo: "Expo",
+		postgresql: "PostgreSQL",
+		mongodb: "mongodb",
 	};
 
 	if (slugOverrides[cleanName]) {
