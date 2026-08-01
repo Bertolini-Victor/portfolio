@@ -18,26 +18,51 @@ export const About: React.FC = () => {
 		{
 			categoryName: t.about.categories.frontend,
 			skills: [
-				"React",
-				"TypeScript",
-				"JavaScript",
 				"HTML5",
 				"CSS3",
+				"JavaScript",
 				"Bootstrap",
+				"React",
+				"TypeScript",
+				{ name: "React Native", slug: "react" },
 			],
 		},
 		{
 			categoryName: t.about.categories.backend,
 			skills: [
 				{ name: "Node.js", slug: "nodedotjs" },
-				"RESTful APIs",
+				"Java",
+				{ name: "Spring Boot", slug: "springboot" },
 				"JSON",
-				"Web Services",
+				"RESTful APIs",
+			],
+		},
+		{
+			categoryName: t.about.categories.databases,
+			skills: [
+				{ name: "PostgreSQL", slug: "PostgreSQL" },
+				{ name: "MongoDB", slug: "mongodb" },
+				{ name: "Neo4J", slug: "neo4j" },
+				{ name: "Firebase", slug: "firebase" },
+				{ name: "SQLite", slug: "sqlite" },
 			],
 		},
 		{
 			categoryName: t.about.categories.tools,
-			skills: ["Git", "GitHub", "Vite", "npm", "Internationalization (i18n)"],
+			skills: [
+				"Git",
+				"GitHub",
+				"npm",
+				"Vite",
+				{ name: "Expo", slug: "expo" },
+				{ name: "Jira", slug: "jira" },
+				{ name: "Docker", slug: "docker" },
+				"Internationalization (i18n)",
+			],
+		},
+		{
+			categoryName: t.about.categories.other,
+			skills: [{ name: "Arduino", slug: "arduino" }, "C++", "Linux"],
 		},
 	];
 
