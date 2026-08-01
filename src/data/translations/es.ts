@@ -31,6 +31,7 @@ export const es = {
 			backend: "Backend & APIs",
 			databases: "Bases de Datos",
 			tools: "Herramientas & Flujo de trabajo",
+			other: "Otras Habilidades",
 		},
 	},
 	projects: {
