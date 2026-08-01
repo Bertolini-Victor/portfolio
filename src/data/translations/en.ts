@@ -11,21 +11,21 @@ export const en = {
 		title: "About me",
 		subtitle:
 			"Passionate about software development and building efficient digital solutions.",
-		bio1: "Hello, I am a software developer focused on creating modern and scalable web applications. I specialize in building dynamic frontend interfaces and structuring robust backend services.",
-		bio2: "My constant goal is to transform complex requirements into intuitive applications, prioritizing user experience, technical performance, and code maintainability.",
-		viewCv: "View CV",
+		bio1: "Hi, I'm a software developer with experience building applications across different formats — web, mobile, and desktop — plus embedded systems. I like understanding a problem end to end, from the interface a user sees to the logic holding it up on the other side.",
+		bio2: "Most of my experience today is in web development, but it's not where I want to stay boxed in — I enjoy putting together a clean interface just as much as solving a backend problem or getting a microcontroller to talk properly to an app. I'd rather stay open and pick the right tool for the problem, not the other way around.",
 		highlights: [
 			{
-				title: "Web Development",
+				title: "Multiple platforms",
 				description:
-					"Focused on clean code, reusable components, and modular architecture.",
+					"From web apps to mobile, desktop tools, and embedded systems.",
 			},
 			{
 				title: "UI / UX",
 				description:
-					"Intuitive, accessible, and responsive interfaces across all devices.",
+					"Intuitive, accessible interfaces that adapt to any device.",
 			},
 		],
+		viewCv: "View CV",
 		categories: {
 			frontend: "Frontend",
 			backend: "Backend & APIs",
@@ -58,7 +58,7 @@ export const en = {
 		galleryTitle: "Screenshots Gallery",
 		technologiesTitle: "Technologies Used",
 		notFound: "Project not found.",
-		closeLightbox: "Close image"
+		closeLightbox: "Close image",
 	},
 	contact: {
 		title: "Contact",

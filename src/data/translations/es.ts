@@ -11,14 +11,13 @@ export const es = {
 		title: "Sobre mí",
 		subtitle:
 			"Apasionado por el desarrollo de software y la creación de soluciones digitales eficientes.",
-		bio1: "Hola, soy desarrollador de software con experiencia enfocada en la creación de aplicaciones web modernas y escalables. Me especializo en construir interfaces dinámicas en el frontend y estructurar servicios robustos en el backend.",
-		bio2: "Mi objetivo constante es transformar requerimientos complejos en aplicaciones intuitivas, cuidando tanto la experiencia de usuario como el rendimiento técnico y la mantenibilidad del código.",
-		viewCv: "Ver CV",
+		bio1: "Hola, soy desarrollador de software con experiencia construyendo aplicaciones en distintos formatos — web, mobile y de escritorio — además de sistemas embebidos. Me gusta entender el problema de punta a punta, desde la interfaz que ve el usuario hasta la lógica que la sostiene del otro lado.",
+		bio2: "La mayor parte de mi experiencia hoy está en desarrollo web, pero no es donde quiero quedarme encasillado — disfruto tanto armar una interfaz prolija como resolver un problema de backend o hacer que un microcontrolador se comunique bien con una app. Prefiero mantenerme abierto y elegir la herramienta según el problema, no al revés.",
 		highlights: [
 			{
-				title: "Desarrollo Web",
+				title: "Múltiples plataformas",
 				description:
-					"Enfoque en código limpio, componentes reutilizables y arquitectura modular.",
+					"De aplicaciones web a apps mobile, herramientas de escritorio y sistemas embebidos.",
 			},
 			{
 				title: "UI / UX",
@@ -26,6 +25,7 @@ export const es = {
 					"Interfaces intuitivas, accesibles y adaptables a cualquier dispositivo.",
 			},
 		],
+		viewCv: "Ver CV",
 		categories: {
 			frontend: "Frontend",
 			backend: "Backend & APIs",
