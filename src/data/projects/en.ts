@@ -7,7 +7,7 @@ export const projectsEn: ProjectItem[] = [
 		description:
 			"Institutional site for a UNQ research laboratory, with dynamic content loaded from JSON — my first project for a real client.",
 		fullStory:
-			"Development of the official website for the Laboratory of Physiology and Genetics of Beneficial Bacteria for Plants at UNQ, a project I did as a favor but with the same level of commitment as freelance work. Content — researchers, publications, and services — loads dynamically from JSON files instead of being hardcoded into the HTML, so the lab can update information without touching code. Built with plain HTML, CSS, and JavaScript, no frameworks, to keep it light and fast.",
+			"My mom's lab needed a way to publicize their work — research lines, papers, members — but between the economic situation of science and public universities, there was no budget for a paid build with domain and hosting. They asked me for the favor, and I built it simple but professional, meant to live for free on GitHub Pages. Before writing any code, I showed them a UI design put together with AI's help so they could sign off on it, and once that was settled, the hardest part was recovering and cleaning up the papers — I built a separate scraper to pull them from ORCID and filter duplicates, then they checked that none were missing. They still use it today and share it in their official emails; every so often they ask me for a small change, removing someone who's no longer there or adding a new collaborator. If I rebuilt it today I'd probably use React, now that I know it hosts fine on GitHub Pages — though that would add friction for them requesting minor changes, which is simpler to touch with plain HTML and JSON.",
 		features: [
 			"Dynamic content loaded from JSON (researchers, publications, services)",
 			"Publications section that updates automatically and links to each researcher",
@@ -27,7 +27,7 @@ export const projectsEn: ProjectItem[] = [
 		description:
 			"Premium hardware e-commerce with authentication, real-time product CRUD against Firestore, and a protected admin panel.",
 		fullStory:
-			"Final project for the Talento Lab program, focused on practicing a full client-side fullstack architecture. I implemented a catalog migration (originally static JSON) to Firestore, authentication with Firebase Auth, and an admin panel with full CRUD operations over the catalog, including image uploads via the Imgbb API.",
+			"Final project for a TalentoTech React course — the e-commerce domain was given by the assignment, not something I chose, and 'Talento Lab' is just the fictional store name I used for it. The most laborious part was migrating the catalog from a plain-JS cart, with a huge product JSON, over to Firebase — all that data had to be adapted to the new structure. Firebase Auth also took some time, more because it was my first time using it than because of any real difficulty with the concept. I'm currently rebuilding it with a Java and Spring Boot backend of my own, to actually understand what Firebase was handling under the hood instead of leaving it to an automated tool.",
 		features: [
 			"Global cart context (Context API) with real-time total calculation",
 			"Firebase Auth authentication with protected routes for the admin panel",
@@ -54,7 +54,7 @@ export const projectsEn: ProjectItem[] = [
 		description:
 			"Bilingual, multi-currency web service quote generator, with an editable catalog and backend-free PDF export.",
 		fullStory:
-			"An SPA built to put together web service quotes quickly: a catalog of 55 services across 11 categories, fully editable from the UI. Each service has its own description and price in both Spanish and English, and in both pesos and dollars — switching language or currency is instant. The final quote gets exported to PDF using the browser's native print function, avoiding a heavy library for something that simple.",
+			"It came from a real need: a client needed quotes for two different websites, and since I'd never put together a proper, easily repeatable quote before, I built a tool to simplify the task instead of drafting a one-off document by hand. The hard part wasn't the coding — it was figuring out what it actually needed: an editable catalog, configurable personal info, a clear preview. Within that, simulating a PDF right on the page was a new experience, the first time I'd built something like that. I ended up sending two real quotes with it; the client hasn't responded yet, so in practice it turned out more like a finished exercise than I expected — but it's ready for the next time I need it.",
 		features: [
 			"Catalog of 55 services across 11 categories, editable live from a management modal",
 			"Automatic localStorage persistence — nothing is lost on reload",
@@ -78,7 +78,7 @@ export const projectsEn: ProjectItem[] = [
 		description:
 			"Trivia game with 4 difficulty levels, real-time questions via API, and mobile-first design.",
 		fullStory:
-			"Final integrative project for User Interface Construction at UNQ. The goal was a smooth, responsive experience consuming an external API in real time, with fairly complex game states: 4 difficulty levels, a timed challenge with a visual progress bar, and high scores saved in the browser.",
+			"This was the final integrative project for User Interface Construction, with a specific requirement: unlike the rest of the course's incremental assignments, which were group work, this one had to be done individually — that way the professor made sure everyone could show what they'd learned on their own. Technically it wasn't too complicated; the API the professor gave us was well designed and reliably hosted. What did require care was not burning through the monthly usage quota of the free plan behind it — the game needed real testing before submission, but without overdoing it, both for my own sake and for classmates also relying on it. The result is something of a parody of Preguntados (the Argentine trivia game), with four difficulty levels and scores saved in the browser.",
 		features: [
 			"4 difficulty levels (Easy, Normal, Hard, Extreme)",
 			"Timed challenge, 10 seconds per question with a progress bar",
@@ -99,7 +99,7 @@ export const projectsEn: ProjectItem[] = [
 		description:
 			"Parking assistance system with ultrasonic sensors and live video over WiFi, with a React dashboard consuming the microcontroller's own API.",
 		fullStory:
-			"Final project for Introduction to Microcontroller Programming with Arduino (UNQ). It combines an ESP32-CAM that reads three ultrasonic sensors non-blockingly (avoiding cross-interference between them), streams live MJPEG video, and exposes everything through its own REST API over a WiFi network the module itself creates. On the other end, a React dashboard consumes that API in real time, with reconnection handling — if the board disconnects or drops packets, the interface detects it instantly instead of silently showing stale data.",
+			"The parking-assistant idea itself isn't mine — I found it already put together somewhere, using a single sensor, an Arduino board, and an LED display simulating a parking spot. I used that as a starting point for the course's final project and took it much further: three sensors, an ESP32-CAM instead of an Arduino Uno, live video, and my own React dashboard consuming the API the board itself exposes. The hardest part was the wiring — the ESP32-CAM has fewer pins than an Arduino Uno, so I had to bridge the TRIG pins of the three sensors together, then solder and heat-shrink each joint so vibration wouldn't work them loose. I hit one real blocker: I couldn't get the camera's video server to start while also using pin 16 for one of the sensors. After digging into it, I found that the manufacturer's datasheet mentions, almost in passing, that the board's internal wiring shares a connection between the camera server and that specific pin — using it for anything else caused an overload and the server would fail. The fix was moving that wire to pin 12. I built it solo, over a full weekend of work.",
 		features: [
 			"Array of 3 ultrasonic sensors with sequential reading, no cross-interference",
 			"Live MJPEG video streaming straight from the microcontroller",
@@ -126,7 +126,7 @@ export const projectsEn: ProjectItem[] = [
 		description:
 			"Node.js script using Puppeteer to extract scientific publications from ORCID profiles — the tool that feeds data into the LFGBBP lab's website.",
 		fullStory:
-			"A Puppeteer-based scraper built to automate something that used to be done by hand: keeping the LFGBBP lab website's publications list up to date. It drives a headless Chromium instance to navigate public ORCID profiles, wait for dynamic content, page through results, and extract title, year, journal, DOI, and authors for each paper. A second script filters out duplicates by DOI when formatting varies across profiles.",
+			"I built it so I wouldn't have to pull paper information by hand, one by one. I'd rather spend time filtering results than building the publications JSON myself from scratch. The scraping part itself wasn't too hard — I'd never even considered the idea of scraping sites before, or the things to watch out for, like not hammering a server with requests — but filtering duplicates and filling in missing data across ORCID profiles took real time, without ever being a blocker. Today it's just sitting there: it served its purpose for getting the lab's site off the ground, and I left it public on GitHub in case it's useful to someone else for the same thing, though I don't use it anymore.",
 		features: [
 			"Extracts data from multiple ORCID profiles automatically",
 			"Handles dynamic content and pagination with Puppeteer",

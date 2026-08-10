@@ -7,7 +7,7 @@ export const projectsEs: ProjectItem[] = [
 		description:
 			"Sitio institucional para un laboratorio de investigación de la UNQ, con contenido dinámico cargado desde JSON — mi primer trabajo para un cliente real.",
 		fullStory:
-			"Desarrollo del sitio web oficial del Laboratorio de Fisiología y Genética de Bacterias Beneficiosas para Plantas de la UNQ, un proyecto que hice como favor pero con el mismo nivel de compromiso que un trabajo freelance. El contenido — investigadores, publicaciones y servicios — se carga dinámicamente desde archivos JSON en vez de estar hardcodeado en el HTML, para que el laboratorio pueda actualizar la información sin tocar código. Construido con HTML, CSS y JavaScript puro, sin frameworks, para mantenerlo liviano y rápido.",
+			"El laboratorio de mi mamá necesitaba una forma de publicitar su trabajo — líneas de investigación, papers, integrantes — pero entre la situación económica de la ciencia y las universidades públicas, no había presupuesto para un desarrollo pago con dominio y hosting. Me pidieron el favor, y lo armé simple pero profesional, para que viviera gratis en GitHub Pages. Antes de tocar código les mostré un diseño de UI hecho con ayuda de IA para que dieran el visto bueno, y ya con eso definido, lo más difícil fue recuperar y depurar los papers — construí un scraper aparte para sacarlos de ORCID y filtrar duplicados, y después ellos revisaron que no faltara ninguno. Hoy lo siguen usando y lo comparten en sus mails oficiales; de tanto en tanto me piden algún cambio chico, sacar a alguien que ya no está o sumar un colaborador nuevo. Si lo rehiciera hoy probablemente usaría React, ahora que sé que se puede hostear igual en GitHub Pages — aunque eso les sumaría fricción para pedir cambios menores, que con HTML y JSON puro es más simple de tocar.",
 		features: [
 			"Contenido dinámico cargado desde JSON (investigadores, publicaciones, servicios)",
 			"Sección de publicaciones que se actualiza automáticamente y enlaza a cada investigador",
@@ -27,7 +27,7 @@ export const projectsEs: ProjectItem[] = [
 		description:
 			"E-commerce de hardware premium con autenticación, CRUD de productos en tiempo real contra Firestore y panel de administración protegido.",
 		fullStory:
-			"Proyecto final del curso de React de TalentoTech. Arrancó como un catálogo estático en JSON y escaló a una arquitectura 100% cloud: el catálogo migró a Firestore, se sumó autenticación con Firebase Auth, y las rutas de administración quedaron protegidas por un componente guardián que expulsa a cualquiera que no esté logueado. El panel de admin permite crear, editar y eliminar productos en tiempo real, con carga de imágenes vía la API de Imgbb.",
+			"Proyecto final del curso de React de TalentoTech — el dominio de e-commerce venía dado por la consigna, no lo elegí yo, y 'Talento Lab' es apenas el nombre de fantasía que usé para la tienda. Lo más laborioso fue migrar el catálogo desde un carrito en JS puro, con un JSON enorme de productos, hacia Firebase — hubo que adaptar toda esa data a la nueva estructura. Firebase Auth también me llevó su tiempo, más por ser la primera vez que lo usaba que por dificultad real del tema. Hoy lo estoy reconstruyendo con un backend propio en Java y Spring Boot, para entender de verdad qué hacía Firebase por debajo en vez de dejarlo resuelto por una herramienta automática.",
 		features: [
 			"Carrito con contexto global (Context API) y cálculo de totales en tiempo real",
 			"Autenticación con Firebase Auth y rutas protegidas para el panel de administración",
@@ -54,7 +54,7 @@ export const projectsEs: ProjectItem[] = [
 		description:
 			"Cotizador de servicios web bilingüe y multi-moneda, con catálogo editable y exportación a PDF sin depender de ningún backend.",
 		fullStory:
-			"Una SPA pensada para armar presupuestos de servicios web rápido: catálogo de 55 servicios organizados en 11 categorías, completamente editable desde la interfaz. Cada servicio tiene su propia descripción y precio en español e inglés, y en pesos y dólares — el cambio de idioma o moneda es instantáneo. El presupuesto final se exporta a PDF usando la función nativa de impresión del navegador, evitando sumar una librería pesada solo para eso.",
+			"Nació de una necesidad real: un cliente necesitaba presupuestos para dos páginas web distintas, y como nunca había armado uno de forma prolija ni fácil de repetir, preferí construir una herramienta que simplificara la tarea antes que armar un documento suelto a mano. Lo más difícil no fue programarlo — fue decidir qué tenía que tener: catálogo editable, datos personales configurables, una vista previa clara. Y dentro de eso, simular un PDF en la propia página fue una experiencia nueva, la primera vez que hice algo así. Llegué a mandar dos presupuestos reales con la herramienta; el cliente todavía no respondió, así que en la práctica quedó más como ejercicio de lo que esperaba — pero está lista para la próxima vez que la necesite.",
 		features: [
 			"Catálogo de 55 servicios en 11 categorías, editable en vivo desde un modal de gestión",
 			"Persistencia automática en localStorage — nada se pierde al recargar",
@@ -78,7 +78,7 @@ export const projectsEs: ProjectItem[] = [
 		description:
 			"Juego de trivia con 4 niveles de dificultad, preguntas en tiempo real vía API y diseño mobile-first.",
 		fullStory:
-			"Trabajo final integrador para Construcción de Interfaces de Usuario en la UNQ. El objetivo era una experiencia fluida y responsive consumiendo una API externa en tiempo real, con estados de juego relativamente complejos: 4 niveles de dificultad, un desafío contra el tiempo con barra de progreso visual, y guardado de mejores puntajes en el navegador.",
+			"Fue el trabajo final integrador de Construcción de Interfaces de Usuario, con un requisito particular: a diferencia del resto de los TP incrementales de la materia, que eran grupales, este tenía que ser individual — así el profesor se aseguraba de que cada uno demostrara lo aprendido por su cuenta. Técnicamente no fue muy complicado; la API que nos dio el profesor estaba bien diseñada y hosteada de forma confiable. Lo que sí requirió cuidado fue no gastar de más la cuota de usos mensuales del plan gratuito que la sostenía — había que probar el juego a fondo antes de entregarlo, pero sin excederse, tanto por mí como por mis compañeros que también la usaban. El resultado es una especie de parodia de Preguntados, con cuatro niveles de dificultad y puntajes guardados en el navegador.",
 		features: [
 			"4 niveles de dificultad (Easy, Normal, Hard, Extreme)",
 			"Desafío contra el tiempo, 10 segundos por pregunta con barra de progreso",
@@ -99,7 +99,7 @@ export const projectsEs: ProjectItem[] = [
 		description:
 			"Sistema de asistencia de estacionamiento con sensores ultrasónicos y video en vivo por WiFi, con un dashboard en React consumiendo la API del propio microcontrolador.",
 		fullStory:
-			"Trabajo final de Introducción a la Programación de Microcontroladores con Arduino (UNQ). Combina un ESP32-CAM que lee tres sensores ultrasónicos de forma no bloqueante (evitando interferencia entre ellos), transmite video en vivo por MJPEG, y expone todo vía una API REST propia sobre una red WiFi que el mismo módulo levanta. Del otro lado, un dashboard en React consume esa API en tiempo real, con manejo de reconexión — si la placa se desconecta o pierde paquetes, la interfaz lo detecta al instante en vez de quedarse mostrando datos viejos.",
+			"La idea de un asistente de estacionamiento no es mía — la encontré ya armada, con un solo sensor, una placa Arduino y un display de LEDs simulando el estacionamiento. La tomé como base para el trabajo final de la materia y la llevé bastante más lejos: tres sensores, una ESP32-CAM en vez de un Arduino Uno, video en vivo, y un dashboard propio en React consumiendo la API que expone la misma placa. Lo más difícil fue el cableado — la ESP32-CAM tiene menos pines que un Arduino Uno, así que tuve que puentear los pines TRIG de los tres sensores entre sí, y después soldar y termocontraer cada unión para que no se soltara con la vibración. Tuve un problema puntual bloqueante: no lograba levantar el servidor de video de la cámara mientras usaba el pin 16 para uno de los sensores. Después de investigar, encontré que la hoja de datos del fabricante menciona, casi al pasar, que el cableado interno de la placa comparte conexión entre el servidor de la cámara y ese pin específico — al usarlo para otra cosa, se sobrecargaba y el servidor fallaba. La solución fue mover ese cable al pin 12. Lo hice solo, en un fin de semana entero de trabajo.",
 		features: [
 			"Arreglo de 3 sensores ultrasónicos con lectura secuencial, sin interferencia cruzada",
 			"Video en vivo por streaming MJPEG desde el microcontrolador",
@@ -126,7 +126,7 @@ export const projectsEs: ProjectItem[] = [
 		description:
 			"Script de Node.js con Puppeteer que extrae publicaciones científicas desde perfiles de ORCID — la herramienta que alimenta de datos al sitio del laboratorio LFGBBP.",
 		fullStory:
-			"Un scraper hecho con Puppeteer para automatizar algo que se estaba haciendo a mano: mantener actualizada la lista de publicaciones del sitio del laboratorio LFGBBP. Controla un Chromium headless para navegar los perfiles públicos de ORCID, esperar el contenido dinámico, pasar de página en página, y extraer título, año, revista, DOI y autores de cada paper. Incluye un segundo script para filtrar duplicados por DOI cuando el formato varía entre perfiles.",
+			"Lo armé para no tener que sacar la información de los papers a mano, uno por uno. Preferí invertir tiempo filtrando resultados antes que construir el JSON de publicaciones yo mismo desde cero. La parte de scrapear en sí no me costó mucho — nunca había pensado siquiera en la idea de scrapear sitios, ni en los cuidados que hay que tener, como no saturar un servidor a pedidos — pero filtrar duplicados y completar datos faltantes entre perfiles de ORCID sí me llevó tiempo real, sin ser nunca algo bloqueante. Hoy quedó ahí: cumplió su propósito para levantar el sitio del laboratorio, y lo dejé público en GitHub por si a alguien más le sirve para lo mismo, aunque no lo uso más.",
 		features: [
 			"Extrae datos de múltiples perfiles de ORCID de forma automática",
 			"Maneja contenido dinámico y paginación con Puppeteer",
